@@ -9,7 +9,7 @@
         "command": "-editor.action.clipboardCopyAction"
     },
     {
-        "key": "meta+v",
+        "key": "meta+x",
         "command": "editor.action.clipboardCutAction"
     },
     {
@@ -31,5 +31,33 @@
     {
         "key": "ctrl+s",
         "command": "-workbench.action.files.save"
+    },
+    {
+        "key": "meta+z",
+        "command": "undo"
+    },
+    {
+        "key": "ctrl+z",
+        "command": "-undo"
+    },
+    {
+        "key": "meta+/",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+/",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "meta+f",
+        "command": "actions.find",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-actions.find",
+        "when": "editorFocus || editorIsOpen"
     }
 ]

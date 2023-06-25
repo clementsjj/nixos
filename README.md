@@ -2,12 +2,7 @@
 nixos configuration
 
 # Configs to add
-- ~/.bashrc
-- ~/.bash_aliases
-- ~/.bash_vars
-- ~/.config/kdeglobal
-- ~/.config/Code/User/keybindings.json
-- ~/.config/Code/User/settings.json
+
 
 
 # Resources
@@ -37,6 +32,36 @@ https://github.com/gvolpe/dconf2nix
 # Conguration Additions
 
 `videoDriver = "amdgpu";`
+
+# Configuration Files
+- ~/.bashrc
+- ~/.bash_aliases
+- ~/.bash_vars
+- ~/.config/kdeglobals
+    - remab of ctrl to super for copy, paste, cut, save
+- ~/.config/kglobalshortcutsrc
+    - kwin shortcuts
+        - Walk through windows to meta+tab
+        - window quick tile to alt+shift+_
+        - open konsole with meta+t
+- ~/.config/kwinrc
+    - Tiling definitions; night color; no highlight window on meta+tab
+- ~/.config/plasmashellrc
+    - "Panel" sizes
+- ~/.config/plasma-org.kde.plasma.desktop-appletsrc
+    - Panel settings
+- ~/.config/Code/User/keybindings.json
+    - remap ctrl to super for copy, paste, cut, find, save
+- ~/.config/Code/User/settings.json
+    - VSCode dark theme and gitlab copilot
+
+
+# KDE
+Since this is my first time using KDE, I want to record some of the things I need to remember. 
+
+In `~/.config/plasma-org.kde.plasma.desktop-appletsrc`, I can find my applets and most importantly the taskbar/panel (or whatever they are called). In the config, they are referred to as `Containments`. If the containment has a setting `plugin=org.kde.panel`, then it is a task panel. Since I found adjusting the task panel to be a bit difficult, I wanted to be sure I could save my configuration to use again. 
+
+
 
 # To Do
 

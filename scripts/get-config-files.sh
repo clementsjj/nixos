@@ -1,18 +1,25 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Define an array with the file paths
+# KDE Configs
+# kdeglobals - contains shortcuts 
+# kglobalshortcutsrc -
+
 files=(
-    "/home/juuj/.bashrc"
-    "/home/juuj/.bash_aliases"
-    "/home/juuj/.bash_vars"
-    "/home/juuj/.config/kdeglobals"
-    "/home/juuj/.config/Code/User/keybindings.json"
-    "/home/juuj/.config/Code/User/settings.json"
+    "${HOME}/.bashrc"
+    "${HOME}/.bash_aliases"
+    "${HOME}/.bash_vars"
+    "${HOME}/.config/kdeglobals"
+    "${HOME}/.config/kglobalshortcutsrc"
+    "${HOME}/.config/kwinrc"
+    "${HOME}/.config/plasmashellrc"
+    "${HOME}/.config/plasma-org.kde.plasma.desktop-appletsrc"
+    "${HOME}/.config/Code/User/keybindings.json"
+    "${HOME}/.config/Code/User/settings.json"
 )
 
 # Get the script directory
 script_dir=$(dirname "$0")
-
+echo "script_dir: ${script_dir}"
 # Create the 'configs' directory if it doesn't exist
 mkdir -p "${script_dir}/../configs"
 

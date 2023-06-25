@@ -143,49 +143,51 @@ hardware.opengl.extraPackages32 = with pkgs; [
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-	openssl
+	    openssl
     	vim
-	wget
-	git
-	curl
-	neofetch
-	htop
-	brave
-	discord
-	firefox
-	notepadqq
-	vscode
-	tree
-        kitty	
-	nfs-utils
-	hugo
-	gnumake
-	gcc
-	github-desktop
-	virt-manager
-	qemu
-	libverto
-	steam-run
-	ncurses
-	xorg.libX11
-  	xorg.libX11.dev
-  	xorg.libxcb
-  	xorg.libXft
-  	xorg.libXinerama
-	xorg.xinit
-  	xorg.xinput
-	(lutris.override {
-	       extraPkgs = pkgs: [
-		 # List package dependencies here
-		 wineWowPackages.stable
-		 winetricks
-	       ];
-	    })
+	    wget
+	    git
+	    curl
+	    neofetch
+	    htop
+	    brave
+	    discord
+	    firefox
+	    notepadqq
+      # signal-desktop
+	    vscode
+	    tree
+      kitty	
+	    nfs-utils
+	    hugo
+	    gnumake
+	    gcc
+	    github-desktop
+	    virt-manager
+	    qemu
+	    libverto
+	    steam-run
+	    ncurses
+	    xorg.libX11
+  	  xorg.libX11.dev
+  	  xorg.libxcb
+  	  xorg.libXft
+  	  xorg.libXinerama
+	    xorg.xinit
+  	  xorg.xinput
+      (lutris.override {
+            extraPkgs = pkgs: [
+        # List package dependencies here
+        wineWowPackages.stable
+        winetricks
+            ];
+          })
   ];
   virtualisation.libvirtd.enable = true; 
   
   services.flatpak.enable = true;
   services.samba.enable = true;
+  
   programs.steam.enable = true;
   programs.steam.remotePlay.openFirewall = true;
   programs.steam.dedicatedServer.openFirewall = true;
